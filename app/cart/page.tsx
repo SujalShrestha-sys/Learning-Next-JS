@@ -8,7 +8,6 @@ export default function CartPage() {
     const cartProducts = cartIds
         .map((id) => products.find((p) => p.id === id))
         .filter((p): p is NonNullable<typeof p> => p !== undefined);
-    console.log(cartProducts)
 
     return (
         <div>
