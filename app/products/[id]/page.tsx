@@ -1,5 +1,5 @@
 import { products } from "@/app/product-data";
-
+import NotFoundPage from "@/app/not-found";
 export default async function ProductDetailsPage({
     params,
 }: {
@@ -10,7 +10,7 @@ export default async function ProductDetailsPage({
     const product = products.find((p) => p.id === id);
 
     if (!product) {
-        return <h1>Product not found</h1>;
+        return <NotFoundPage />;
     }
 
     return (
